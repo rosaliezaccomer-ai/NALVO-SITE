@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales — NALVO Partners</title>
+    <!-- Tailwind and Fonts are processed via main.js import, but for separate pages we need to ensure styles are loaded. 
+         In Vite, importing main.js here works if it imports the CSS. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="antialiased bg-white text-[#1a1a1a] font-sans">
+
+    <!-- Navigation (Simple Version) -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-4 hover:opacity-80 transition-opacity">
+                <img src="/logo.png" alt="Nalvo Logo" class="h-12 w-auto">
+                <div class="text-xl font-serif tracking-widest uppercase">Nalvo</div>
+            </a>
+            <div class="text-xs font-medium uppercase tracking-widest">
+                <a href="/" class="nav-link">Retour à l'accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl font-serif mb-12">Mentions Légales</h1>
+
+            <div class="space-y-8 text-gray-700 leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-bold text-black mb-4">1. Édition du site</h2>
+                    <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie
+                        numérique, il est précisé aux utilisateurs du site internet <strong>NALVO Partners</strong>
+                        l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+                    <ul class="list-disc pl-5 mt-4 space-y-2">
+                        <li><strong>Propriétaire du site :</strong> Rosalie Zaccomer - NALVO Partners</li>
+                        <li><strong>Forme sociale :</strong> (À préciser : SAS, SARL, EI...)</li>
+                        <li><strong>SIRET :</strong> (À préciser)</li>
+                        <li><strong>Siège social :</strong> (Adresse à préciser)</li>
+                        <li><strong>Contact :</strong> rosalie@nalvo-partners.com (Exemple)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-black mb-4">2. Hébergement</h2>
+                    <p>Le site est hébergé par : <strong>Vercel Inc.</strong> (ou autre si applicable)<br>
+                        Adresse : 340 S Lemon Ave #4133 Walnut, CA 91789, USA<br>
+                        Téléphone : (559) 288-7060</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-black mb-4">3. Propriété intellectuelle et contrefaçons</h2>
+                    <p><strong>NALVO Partners</strong> est propriétaire des droits de propriété intellectuelle et
+                        détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les
+                        textes, images, graphismes, logos, vidéos, architecture, icônes et sons.</p>
+                    <p class="mt-4">Toute reproduction, représentation, modification, publication, adaptation de tout ou
+                        partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf
+                        autorisation écrite préalable de <strong>NALVO Partners</strong>.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-bold text-black mb-4">4. Limitations de responsabilité</h2>
+                    <p><strong>NALVO Partners</strong> ne pourra être tenu pour responsable des dommages directs et
+                        indirects causés au matériel de l’utilisateur, lors de l’accès au site.</p>
+                    <p><strong>NALVO Partners</strong> décline toute responsabilité quant à l’utilisation qui pourrait
+                        être faite des informations et contenus présents sur le site.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-lg font-serif tracking-widest uppercase">Nalvo</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-gray-400">
+                © 2026 NALVO Partners. Tous droits réservés.
+            </div>
+            <div class="flex space-x-6 text-[10px] uppercase tracking-widest">
+                <a href="https://www.linkedin.com/in/rosalie-zaccomer-459b4a42/" class="hover:underline"
+                    target="_blank">LinkedIn</a>
+                <a href="/mentions-legales.html" class="hover:underline font-bold">Mentions légales</a>
+                <a href="/politique-confidentialite.html" class="hover:underline">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
