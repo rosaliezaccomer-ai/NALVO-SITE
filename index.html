@@ -16,28 +16,53 @@
 <body class="antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-subtle">
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-subtle">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-4">
+            <a href="#home" class="flex items-center space-x-4 hover:opacity-80 transition-opacity">
                 <img src="/logo.png" alt="Nalvo Logo" class="h-10 w-auto">
                 <span class="text-xl font-serif tracking-widest uppercase">Nalvo</span>
-            </div>
+            </a>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-xs font-medium uppercase tracking-widest">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#approche" class="nav-link">Approche</a>
-                <a href="#methode" class="nav-link">Méthode</a>
-                <a href="#case-studies" class="nav-link">Case Studies</a>
-                <a href="#about" class="nav-link">À propos</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link hover:text-gray-500 transition-colors">Home</a>
+                <a href="#approche" class="nav-link hover:text-gray-500 transition-colors">Approche</a>
+                <a href="#methode" class="nav-link hover:text-gray-500 transition-colors">Méthode</a>
+                <a href="#case-studies" class="nav-link hover:text-gray-500 transition-colors">Case Studies</a>
+                <a href="#about" class="nav-link hover:text-gray-500 transition-colors">À propos</a>
+                <a href="#contact" class="nav-link hover:text-gray-500 transition-colors">Contact</a>
             </div>
+
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <!-- Simple mobile menu icon could go here -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button id="mobile-menu-btn" class="p-2 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden fixed inset-0 bg-white/95 backdrop-blur-lg z-50 flex flex-col justify-center items-center h-screen w-screen transition-opacity duration-300">
+            <button id="close-menu-btn" class="absolute top-6 right-6 p-2 text-black focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
+            </button>
+            <div class="flex flex-col space-y-8 text-center text-xl font-serif uppercase tracking-widest">
+                <a href="#home" class="mobile-nav-link hover:text-gray-500 transition-colors">Home</a>
+                <a href="#approche" class="mobile-nav-link hover:text-gray-500 transition-colors">Approche</a>
+                <a href="#methode" class="mobile-nav-link hover:text-gray-500 transition-colors">Méthode</a>
+                <a href="#case-studies" class="mobile-nav-link hover:text-gray-500 transition-colors">Case Studies</a>
+                <a href="#about" class="mobile-nav-link hover:text-gray-500 transition-colors">À propos</a>
+                <a href="#contact" class="mobile-nav-link hover:text-gray-500 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -146,7 +171,8 @@
         <section>
             <div class="max-w-7xl mx-auto px-6">
                 <div class="max-w-3xl">
-                    <h2 class="text-3xl md:text-5xl mb-10 leading-tight">Une posture d’opérateur, pas de consultant.
+                    <h2 class="text-3xl md:text-5xl mb-10 leading-tight">Une posture d’Operating Partner, pas de
+                        consultant.
                     </h2>
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed">Nalvo intervient comme un partenaire
                         opérationnel intégré.</p>
@@ -283,23 +309,58 @@
                         <ul class="space-y-6">
                             <li class="flex justify-between items-center border-b border-subtle pb-4">
                                 <span class="font-medium">Pilotage financier & cash</span>
-                                <span class="text-gray-300">→</span>
+                                <!-- Icon: Banknote/Chart -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400">
+                                    <rect width="20" height="12" x="2" y="6" rx="2" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M6 12h.01M18 12h.01" />
+                                </svg>
                             </li>
                             <li class="flex justify-between items-center border-b border-subtle pb-4">
                                 <span class="font-medium">Structuration commerciale</span>
-                                <span class="text-gray-300">→</span>
+                                <!-- Icon: Trending Up -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400">
+                                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                                    <polyline points="16 7 22 7 22 13" />
+                                </svg>
                             </li>
                             <li class="flex justify-between items-center border-b border-subtle pb-4">
                                 <span class="font-medium">RH & organisation</span>
-                                <span class="text-gray-300">→</span>
+                                <!-- Icon: Users -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
                             </li>
                             <li class="flex justify-between items-center border-b border-subtle pb-4">
                                 <span class="font-medium">Gouvernance & reporting</span>
-                                <span class="text-gray-300">→</span>
+                                <!-- Icon: Clipboard/List -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400">
+                                    <path
+                                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                                </svg>
                             </li>
                             <li class="flex justify-between items-center pb-4">
                                 <span class="font-medium">Exécution opérationnelle</span>
-                                <span class="text-gray-300">→</span>
+                                <!-- Icon: Settings/Gears -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-gray-400">
+                                    <path
+                                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
                             </li>
                         </ul>
                         <div class="mt-12">
@@ -347,8 +408,8 @@
                     <div class="grid md:grid-cols-4 gap-8 items-start border-t border-subtle pt-10 border-b pb-10">
                         <div class="text-4xl font-serif text-gray-300">05</div>
                         <div class="md:col-span-1 font-medium text-xl">Outil Nalvo</div>
-                        <div class="md:col-span-2 text-gray-600">Centralisation des données et des priorités pour
-                            faciliter la décision.</div>
+                        <div class="md:col-span-2 text-gray-600">Un outil de pilotage structurant pour voir clair,
+                            prioriser et décider sereinement.</div>
                     </div>
                 </div>
             </div>
@@ -597,10 +658,13 @@
                     <div class="flex flex-col justify-between">
                         <div>
                             <h4 class="text-xs uppercase tracking-widest text-gray-400 mb-6">Nos valeurs</h4>
-                            <div class="text-2xl font-serif space-x-4">
-                                <span>Clarté</span> · <span>Rigueur</span> · <span>Exécution</span> ·
-                                <span>Confiance</span> · <span>Neutralité</span>
-                            </div>
+                            <ul class="text-2xl font-serif space-y-2">
+                                <li>Clarté</li>
+                                <li>Rigueur</li>
+                                <li>Exécution</li>
+                                <li>Confiance</li>
+                                <li>Neutralité</li>
+                            </ul>
                         </div>
                         <div class="mt-12 pt-12 border-t border-subtle">
                             <p class="text-gray-700 italic">Nalvo rassemble des profils expérimentés en finance,
@@ -646,6 +710,12 @@
                                     placeholder="votre@email.com">
                             </div>
                             <div class="border-b border-gray-200 py-2">
+                                <label class="block text-[10px] uppercase tracking-widest text-gray-400">Numéro de
+                                    téléphone</label>
+                                <input type="tel" name="telephone" class="w-full outline-none text-black py-2"
+                                    placeholder="Votre numéro">
+                            </div>
+                            <div class="border-b border-gray-200 py-2">
                                 <label class="block text-[10px] uppercase tracking-widest text-gray-400">Participants
                                     (optionnel)</label>
                                 <input type="text" name="participants" class="w-full outline-none text-black py-2"
@@ -660,6 +730,25 @@
                                 class="w-full bg-black text-white py-4 text-xs uppercase tracking-widest mt-4 hover:bg-gray-800 transition-colors">Envoyer
                                 le message</button>
                         </form>
+                        <div class="mt-8 text-[10px] text-gray-500 leading-relaxed border-t border-gray-200 pt-4">
+                            <p>Les informations recueillies via ce formulaire sont traitées par NALVO PARTNERS afin de
+                                répondre à votre demande.</p>
+                            <p><strong>Base légale :</strong> intérêt légitime (traiter et répondre aux sollicitations).
+                            </p>
+                            <p><strong>Données traitées :</strong> entreprise, nom complet, email professionnel,
+                                participants (optionnel), message.</p>
+                            <p class="mt-1"><strong>Participants :</strong> si vous renseignez des participants, vous
+                                confirmez disposer de l’autorisation des personnes concernées pour nous transmettre
+                                leurs données.</p>
+                            <p class="mt-1"><strong>Durée de conservation :</strong> 12 mois à compter du dernier
+                                échange, sauf obligation légale contraire.</p>
+                            <p class="mt-1 hidden md:block"><strong>Droits :</strong> accès, rectification, effacement,
+                                opposition, limitation, portabilité.</p>
+                            <p class="mt-1"><strong>Contact :</strong> <a href="mailto:rosalie@nalvo-partners.com"
+                                    class="hover:underline">rosalie@nalvo-partners.com</a>. Vous pouvez également
+                                introduire une réclamation auprès de la CNIL. <a href="/politique-confidentialite.html"
+                                    class="underline">En savoir plus</a>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -669,17 +758,32 @@
 
     <!-- Footer -->
     <footer class="py-12 border-t border-subtle">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-lg font-serif tracking-widest uppercase">Nalvo</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-gray-400">
-                © 2026 NALVO Partners. Tous droits réservés.
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left text-[10px] uppercase tracking-widest text-gray-400">
+
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+                <span class="text-black font-medium">NALVO PARTNERS © 2026</span>
+                <span class="hidden md:inline">—</span>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.linkedin.com/company/nalvo-partners/about/?viewAsMember=true"
+                        class="hover:underline" target="_blank">LinkedIn</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/mentions-legales.html" class="hover:underline">Mentions légales</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/politique-confidentialite.html" class="hover:underline">Politique de confidentialité</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/politique-confidentialite.html" class="hover:underline">Cookies</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/cgu.html" class="hover:underline">CGU</a>
+                </div>
             </div>
-            <div class="flex space-x-6 text-[10px] uppercase tracking-widest">
-                <a href="https://www.linkedin.com/in/rosalie-zaccomer-459b4a42/" class="hover:underline"
-                    target="_blank">LinkedIn</a>
-                <a href="/mentions-legales.html" class="hover:underline">Mentions légales</a>
-                <a href="/politique-confidentialite.html" class="hover:underline">Politique de confidentialité</a>
+
+            <div class="mt-4 md:mt-0">
+                Contact : <a href="mailto:rosalie@nalvo-partners.com"
+                    class="hover:underline text-black">rosalie@nalvo-partners.com</a>
             </div>
+
         </div>
     </footer>
 

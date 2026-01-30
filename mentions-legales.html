@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions Légales — NALVO Partners</title>
-    <!-- Tailwind and Fonts are processed via main.js import, but for separate pages we need to ensure styles are loaded. 
-         In Vite, importing main.js here works if it imports the CSS. -->
+    <!-- Tailwind and Fonts are processed via main.js import in dev, mimicking this for individual page structure -->
+    <script type="module" src="/src/main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,83 +16,168 @@
 
 <body class="antialiased bg-white text-[#1a1a1a] font-sans">
 
-    <!-- Navigation (Simple Version) -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="/" class="flex items-center gap-4 hover:opacity-80 transition-opacity">
                 <img src="/logo.png" alt="Nalvo Logo" class="h-12 w-auto">
                 <div class="text-xl font-serif tracking-widest uppercase">Nalvo</div>
             </a>
             <div class="text-xs font-medium uppercase tracking-widest">
-                <a href="/" class="nav-link">Retour à l'accueil</a>
+                <a href="/" class="nav-link hover:text-gray-500 transition-colors">Retour à l'accueil</a>
             </div>
         </div>
     </nav>
 
     <main class="pt-32 pb-20 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl font-serif mb-12">Mentions Légales</h1>
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl mb-12 font-serif">Mentions Légales</h1>
 
-            <div class="space-y-8 text-gray-700 leading-relaxed">
-                <section>
-                    <h2 class="text-xl font-bold text-black mb-4">1. Édition du site</h2>
-                    <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie
-                        numérique, il est précisé aux utilisateurs du site internet <strong>NALVO Partners</strong>
-                        l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
-                    <ul class="list-disc pl-5 mt-4 space-y-2">
-                        <li><strong>Propriétaire du site :</strong> Rosalie Zaccomer - NALVO Partners</li>
-                        <li><strong>Forme sociale :</strong> (À préciser : SAS, SARL, EI...)</li>
-                        <li><strong>SIRET :</strong> (À préciser)</li>
-                        <li><strong>Siège social :</strong> (Adresse à préciser)</li>
-                        <li><strong>Contact :</strong> rosalie@nalvo-partners.com (Exemple)</li>
+            <div class="space-y-12 text-sm text-gray-700 leading-relaxed text-justify">
+
+                <!-- SECTION 1 -->
+                <section class="border-b border-gray-200 pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Informations relatives à
+                        l’éditeur du site</h2>
+                    <ul class="space-y-2">
+                        <li><span class="font-bold">Dénomination / Raison sociale :</span> NALVO PARTNERS</li>
+                        <li><span class="font-bold">Forme juridique :</span> Société par actions simplifiée (SAS)</li>
+                        <li><span class="font-bold">Capital social :</span> 1 000,00 €</li>
+                        <li><span class="font-bold">Adresse du siège social :</span> 60 rue François 1er, 75008 Paris
+                        </li>
+                        <li><span class="font-bold">Numéro d’immatriculation (RCS) :</span> 100 173 178 R.C.S. Paris
+                        </li>
+                        <li><span class="font-bold">Numéro d’identification Européen (EUID) :</span> FR7501.100173178
+                        </li>
+                        <li><span class="font-bold">Numéro d’identification à la TVA :</span> en cours d’attribution
+                        </li>
+                        <li><span class="font-bold">E-mail :</span> <a href="mailto:rosalie@nalvo-partners.com"
+                                class="hover:underline">rosalie@nalvo-partners.com</a></li>
+                    </ul>
+                    <br>
+                    <h3 class="font-bold uppercase mb-2">Directeur de la publication / Responsable de la publication :
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><span class="font-bold">Président :</span> RZ CONSULTING, SARL, 60 rue François Ier, 75008
+                            Paris – RCS Paris 943 177 931</li>
+                        <li><span class="font-bold">Représentant légal (personne physique) de RZ CONSULTING :</span>
+                            Zaccomer Rosalie</li>
+                        <li><span class="font-bold">Directeur général :</span> PARVIS CONSULTING, SAS, 60 rue François
+                            Ier, 75008 Paris – RCS Paris 941 884 207</li>
+                        <li><span class="font-bold">Domiciliation :</span> LegalPlace – RCS 814 428 785 (domiciliation
+                            en commun)</li>
+                        <li><span class="font-bold">Activité principale :</span> Prestations de conseil en gestion,
+                            organisation, stratégie et optimisation des performances</li>
                     </ul>
                 </section>
 
-                <section>
-                    <h2 class="text-xl font-bold text-black mb-4">2. Hébergement</h2>
-                    <p>Le site est hébergé par : <strong>Vercel Inc.</strong> (ou autre si applicable)<br>
-                        Adresse : 340 S Lemon Ave #4133 Walnut, CA 91789, USA<br>
-                        Téléphone : (559) 288-7060</p>
+                <!-- SECTION 2 -->
+                <section class="border-b border-gray-200 pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Informations relatives à
+                        l’hébergeur du site</h2>
+                    <ul class="space-y-2">
+                        <li><span class="font-bold">Nom de l’hébergeur :</span> OVHcloud</li>
+                        <li><span class="font-bold">Dénomination sociale :</span> OVH SAS</li>
+                        <li><span class="font-bold">Adresse de l’hébergeur :</span> 2 rue Kellermann, 59100 Roubaix,
+                            France</li>
+                        <li><span class="font-bold">Numéro de téléphone de l’hébergeur :</span> 1007 (depuis la France)
+                            / +33 9 72 10 10 07 (depuis l’étranger)</li>
+                    </ul>
                 </section>
 
-                <section>
-                    <h2 class="text-xl font-bold text-black mb-4">3. Propriété intellectuelle et contrefaçons</h2>
-                    <p><strong>NALVO Partners</strong> est propriétaire des droits de propriété intellectuelle et
-                        détient les droits d’usage sur tous les éléments accessibles sur le site internet, notamment les
-                        textes, images, graphismes, logos, vidéos, architecture, icônes et sons.</p>
-                    <p class="mt-4">Toute reproduction, représentation, modification, publication, adaptation de tout ou
-                        partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf
-                        autorisation écrite préalable de <strong>NALVO Partners</strong>.</p>
+                <!-- SECTION 3 -->
+                <section class="border-b border-gray-200 pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Protection des données
+                        personnelles</h2>
+                    <p class="mb-4">Conformément à la réglementation applicable (RGPD et loi « Informatique et Libertés
+                        » modifiée), vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation,
+                        d’opposition et de portabilité des données vous concernant.</p>
+                    <p>Vous pouvez exercer ces droits en envoyant un courrier électronique à l’adresse suivante : <a
+                            href="mailto:rosalie@nalvo-partners.com"
+                            class="hover:underline">rosalie@nalvo-partners.com</a>.</p>
+                    <p>Ou par courrier à : <strong>NALVO PARTNERS</strong> – 60 rue François 1er, 75008 Paris.</p>
                 </section>
 
-                <section>
-                    <h2 class="text-xl font-bold text-black mb-4">4. Limitations de responsabilité</h2>
-                    <p><strong>NALVO Partners</strong> ne pourra être tenu pour responsable des dommages directs et
-                        indirects causés au matériel de l’utilisateur, lors de l’accès au site.</p>
-                    <p><strong>NALVO Partners</strong> décline toute responsabilité quant à l’utilisation qui pourrait
-                        être faite des informations et contenus présents sur le site.</p>
+                <!-- SECTION 4 -->
+                <section class="border-b border-gray-200 pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Politique d’utilisation des
+                        cookies</h2>
+                    <p>Ce site web peut utiliser des cookies et/ou traceurs strictement nécessaires à son
+                        fonctionnement.</p>
+                    <p>Vous pouvez consulter notre politique de gestion des cookies pour plus d’informations : <a
+                            href="/politique-confidentialite.html" class="underline">Politique de confidentialité &
+                            Cookies</a>.</p>
                 </section>
+
+                <!-- SECTION 5 -->
+                <section class="border-b border-gray-200 pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Conditions générales
+                        d’utilisation</h2>
+                    <p>Nous vous invitons à consulter nos conditions générales d’utilisation : <a href="/cgu.html"
+                            class="underline">CGU</a>.</p>
+                </section>
+
+                <!-- SECTION 6 -->
+                <section class="border-b border-gray-200 pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Droit applicable</h2>
+                    <p>Les présentes mentions légales sont soumises au droit français.</p>
+                </section>
+
+                <!-- SECTION 7 -->
+                <section class="pb-8">
+                    <h2 class="text-lg font-serif mb-4 text-black uppercase tracking-widest">Propriété intellectuelle
+                    </h2>
+                    <p class="mb-4">Tous les contenus présents sur ce site (textes, images, graphismes, logos, icônes,
+                        sons, logiciels, etc.) sont, sauf mention contraire, la propriété de NALVO PARTNERS et/ou de ses
+                        fournisseurs de contenu, et sont protégés par les lois françaises et internationales relatives à
+                        la propriété intellectuelle.</p>
+                    <p class="mb-4">Toute reproduction, représentation, modification, publication, adaptation ou
+                        exploitation, totale ou partielle, des éléments du site, par quelque procédé que ce soit, est
+                        interdite sans l’autorisation écrite préalable de NALVO PARTNERS.</p>
+                    <p class="mb-4">Le site peut contenir des informations fournies par des tiers ou des liens vers
+                        d’autres sites. NALVO PARTNERS ne saurait être tenue responsable du contenu de ces sites tiers.
+                    </p>
+                    <p class="mb-4">Les entreprises souhaitant établir un lien vers ce site sont libres de le faire.
+                        Nous apprécierions que vous nous informiez de la mise en place d’un lien via : <a
+                            href="mailto:rosalie@nalvo-partners.com"
+                            class="hover:underline">rosalie@nalvo-partners.com</a>.</p>
+                    <p class="mt-8 text-xs text-gray-500">Dernière mise à jour : 27/01/2026</p>
+                </section>
+
             </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="py-12 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="text-lg font-serif tracking-widest uppercase">Nalvo</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-gray-400">
-                © 2026 NALVO Partners. Tous droits réservés.
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left text-[10px] uppercase tracking-widest text-gray-400">
+
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+                <span class="text-black font-medium">NALVO PARTNERS © 2026</span>
+                <span class="hidden md:inline">—</span>
+
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.linkedin.com/company/nalvo-partners/about/?viewAsMember=true"
+                        class="hover:underline" target="_blank">LinkedIn</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/mentions-legales.html" class="hover:underline font-bold text-black">Mentions légales</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/politique-confidentialite.html" class="hover:underline">Politique de confidentialité</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/politique-confidentialite.html" class="hover:underline">Cookies</a>
+                    <span class="hidden md:inline">·</span>
+                    <a href="/cgu.html" class="hover:underline">CGU</a>
+                </div>
             </div>
-            <div class="flex space-x-6 text-[10px] uppercase tracking-widest">
-                <a href="https://www.linkedin.com/in/rosalie-zaccomer-459b4a42/" class="hover:underline"
-                    target="_blank">LinkedIn</a>
-                <a href="/mentions-legales.html" class="hover:underline font-bold">Mentions légales</a>
-                <a href="/politique-confidentialite.html" class="hover:underline">Politique de confidentialité</a>
+
+            <div class="mt-4 md:mt-0">
+                Contact : <a href="mailto:rosalie@nalvo-partners.com"
+                    class="hover:underline text-black">rosalie@nalvo-partners.com</a>
             </div>
+
         </div>
     </footer>
-
-    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
