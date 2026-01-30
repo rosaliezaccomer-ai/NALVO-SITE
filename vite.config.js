@@ -11,6 +11,7 @@ module.exports = defineConfig({
         main: './index.html',
         mentions: './mentions-legales.html',
         politique: './politique-confidentialite.html',
+        cgu: './cgu.html',
       },
     },
   },
